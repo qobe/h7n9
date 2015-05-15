@@ -35,7 +35,7 @@ public class WorldRenderer {
             Rectangle rect = block.getBounds();
             float x1 = block.getPosition().x + rect.x;
             float y1 = block.getPosition().y + rect.y;
-            debugRenderer.setColor(new Color(1,0,0,1));
+            debugRenderer.setColor(new Color(255,0,0,1));
             debugRenderer.rect(x1, y1, rect.width, rect.height);
 
         }
@@ -44,7 +44,7 @@ public class WorldRenderer {
         Rectangle rect = gob.getBounds();
         float x1 = gob.getPosition().x + rect.x;
         float y1 = gob.getPosition().y + rect.y;
-        debugRenderer.setColor(new Color(0,1,0,1));
+        debugRenderer.setColor(new Color(0,255,0,1));
         debugRenderer.rect(x1, y1, rect.width, rect.height);
         debugRenderer.end();
     }

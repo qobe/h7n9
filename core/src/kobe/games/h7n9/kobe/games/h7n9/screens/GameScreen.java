@@ -19,7 +19,14 @@ public class GameScreen implements Screen {
     public void render(float delta) {
         Gdx.gl.glClearColor(0.1f, 0.1f, 0.1f, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
         renderer.render();
+    }
+
+    @Override
+    public void show() {
+        this.world = new World();
+        this.renderer = new WorldRenderer(world);
     }
 
     @Override
@@ -39,11 +46,6 @@ public class GameScreen implements Screen {
 
     @Override
     public void hide() {
-
-    }
-
-    @Override
-    public void show() {
 
     }
 
