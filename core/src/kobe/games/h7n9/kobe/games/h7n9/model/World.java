@@ -8,11 +8,11 @@ import com.badlogic.gdx.utils.Array;
  */
 public class World {
 
-    Array blocks = new Array();
+    Array<Block> blocks = new Array();
     //Hero Gob to save the day
     Gob gob;
 
-    public Array getBlocks(){
+    public Array<Block> getBlocks(){
         return blocks;
     }
     public Gob getGob(){
@@ -27,7 +27,11 @@ public class World {
         gob = new Gob(new Vector2(7,2)); //set spawn point for Gob
 
         for (int i = 0; i < 10; i++){
-            blocks.add(new Block(new Vector2(i, 1)));
+            blocks.add(new Block(new Vector2(i, 0)));
+            blocks.add(new Block(new Vector2(i, 7)));
+            if (i > 2){
+                blocks.add(new Block(new Vector2(i, 1)));
+            }
         }
         blocks.add(new Block(new Vector2(9, 2)));
         blocks.add(new Block(new Vector2(9, 3)));

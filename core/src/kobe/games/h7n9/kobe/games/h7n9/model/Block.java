@@ -19,4 +19,11 @@ public class Block {
         this.bounds.height = SIZE;
 
     }
+
+    public Rectangle getBounds (){
+        return this.bounds;
+    }
+    public Vector2 getPosition(){
+        return this.position;
+    }
 }

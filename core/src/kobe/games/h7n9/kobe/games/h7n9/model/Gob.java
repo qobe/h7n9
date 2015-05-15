@@ -33,4 +33,14 @@ public class Gob {
         this.bounds.height = SIZE;
         this.bounds.width = SIZE;
     }
+
+    public Rectangle getBounds(){
+        return this.bounds;
+    }
+
+    public Vector2 getPosition(){
+        return this.position;
+    }
+
+
 }
